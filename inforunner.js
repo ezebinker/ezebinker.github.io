@@ -2,6 +2,45 @@
 // define variables
 var canvas = document.getElementById('canvas');
 
+// Add event listener for `click` events.
+canvas.addEventListener('click', function(event) {
+  // Evento de salto si no está saltando, cayendo, o hay un bonus de vuelo activo
+  if (player.dy === 0 && player.y>=platformHeight && cont<posiblessaltos && tiempovuela==300) {
+    player.isJumping = true;
+    player.dy = player.jumpDy-5;
+    jumpCounter = 12;
+    assetLoader.sounds.jump.play();
+    cont++;
+  }
+
+  if(!player.isJumping){
+    cont=0;
+  }
+
+
+  jumpCounter = Math.max(jumpCounter-1, 0);
+  this.advance();
+
+  // Agrega gravedad
+  if (player.isFalling || player.isJumping) {
+    player.dy += player.gravity;
+  }
+
+  // Cambia la animación si está cayendo
+  if (player.dy > 0) {
+    player.anim = player.fallAnim;
+  }
+  // Cambia la animación si está saltando
+  else if (player.dy < 0) {
+    player.anim = player.jumpAnim;
+  }
+  else {
+    player.anim = player.walkAnim;
+  }
+  player.anim.update();
+
+}, false);
+
 var ctx = canvas.getContext('2d'); //esta es la variable que permite manipular el canvas
 var pregunta=false, vuela=false;
 var player, score, preguntascorrectas=0, idpreguntaactual=0, velocidadanterior, textopregunta,opciona,opcionb,opcionc, stop, ticker, posiblessaltos=1, bonussaltos=100, tiempovuela=300;
