@@ -22,8 +22,8 @@ var assetLoader = (function() {
     'obstaculo'     : 'imgs/obstaculo.png', //obstaculo
     'bitcoin'       : 'imgs/bitcoin.png', //bitcoins
     'plus'          : 'imgs/plus.png', //power up doble salto
-    'caja'          : 'imgs/caja.png', //caja pregunta
-    'caja2'         : 'imgs/caja2.png', //caja pregunta sin el signo
+    'caja'          : 'imgs/Caja.png', //caja pregunta
+    'caja2'         : 'imgs/Caja2.png', //caja pregunta sin el signo
     'plane'         : 'imgs/plane.png' //power up volador
   };
 
