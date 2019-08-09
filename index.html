@@ -1,1 +1,69 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Info Runner | IVO 2019</title>
+    <link rel="stylesheet" href="css/inforunner.css" type="text/css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link rel="icon" href="imgs/logo.jpg">
+    <script type="text/javascript" src="js/jquery.2.1.1.min.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+        <div class="sound sound-off"></div>
+        <div id="menu">
+          <div id="progress">
+            <div id="percent">Iniciando: <span id="p"></span></div>
+            <progress id="progress-bar" value="100"></progress>
+          </div>
+          <div id="main" class="w3-animate-zoom" >
+            <img src="imgs/logo.png"/>
+            <ul>
+              <li><a href="javascript:void(0)" class="button play">Jugar</a></li>
+              <li><a href="javascript:void(0)" class="button credits">Créditos</a></li>
+            </ul>
+          </div>
+          <div id="credits">
+            <ul>
+              <li class="artwork">Gracias por participar de las</li>
+              <li class="artwork" id="linktexto"><a href="http://campus.almagro.ort.edu.ar/informatica/ivo" target="_blank">IVO Informática 2019</a></li>
+            </ul>
+            <br>
+            <a href="javascript:void(0)" class="button back">Volver</a>
+          </div>
+        </div>
+      <canvas id="canvas" width="1023" height="576">
+        <p>Tu navegador no soporta la calidad de este juego.</p>
+        <p>Utiliza la ultima versión de <a href="www.google.com/chrome/‎"> Chrome o Firefox </a> para jugar.</p>
+      </canvas>
+      <div id="game-over">
+        <h2 class="artwork">Sumaste <span id="score"></span> puntos</h2>
+        <form id="myForm" action="" method="post">
+          <h2 class="artwork">Nombre: <input type="text" name="myForm-Name" class="w3-round" id="myForm-Name" size="3" maxlength="3"/>
+          <a href="javascript:void(0)" class="button enviar">Enviar</a></h2>
+        </form>
+      </br>
+        <a href="javascript:void(0)" class="button restart">Reintentar</a>
+        <a href="javascript:void(0)" class="button almenu">Menú</a>
+      </div>
+      <div id="correcta">
+        <img id="laimagen" src="imgs/correcto.png" width="200px"/>
+      </div>
+      <div id="preguntaactiva">
+        <h2 class="artwork"><span id="textopregunta"></span></h2>
+        <a href="javascript:void(0)" class="button opciona"><span id="opciona"></span></a>
+        <a href="javascript:void(0)" class="button opcionb"><span id="opcionb"></span></a>
+        <a href="javascript:void(0)" class="button opcionc"><span id="opcionc"></span></a>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/funciones.js"></script>
+    <script type="text/javascript" src="assets.js"></script>
+    <script type="text/javascript" src="preguntas.js"></script>
+    <script type="text/javascript" src="inforunner.js"></script>
+    <script type="text/javascript" src="secret.js"></script>
+  </body>
+
+</html>
