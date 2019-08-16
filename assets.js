@@ -6,20 +6,17 @@ var assetLoader = (function() {
   this.imgs        = {
     'bg'            : 'imgs/bg.png',
     'sky'           : 'imgs/sky.png',
-    'backdrop'      : 'imgs/fondos/para1.png', //fondo de pantalla
-    'grass'         : 'imgs/grass.png', //pasto
-    'avatar_normal' : 'imgs/personajes/personajeMonstr.png', //avatar
-    'water'         : 'imgs/water.png', //imagen del agua
-    'grass1'        : 'imgs/grassMid1.png', //pasto
-    'grass2'        : 'imgs/grassMid2.png', //pasto
+    'backdrop'      : 'imgs/fondos/para7.jpg', //fondo de pantalla
+    'grass'         : 'imgs/grass2.png', //pasto
+    'avatar_normal' : 'imgs/personajes/personajeWoody.png', //avatar
+    'grass1'        : 'imgs/grassMid1-1.png', //pasto
+    'grass2'        : 'imgs/grassMid1-1.png', //pasto
     'bridge'        : 'imgs/bridge.png', //puente
-    'plant'         : 'imgs/plant.png', //plantas
-    'bush1'         : 'imgs/bush1.png',
-    'bush2'         : 'imgs/bush2.png',
-    'cliff'         : 'imgs/grassCliffRight.png',
+    'plant'         : 'imgs/ball.png', //pelota toy story
+    'cliff'         : 'imgs/grassCliffRight2.png',
     'spikes'        : 'imgs/spikes.png', //obstaculo
     'box'           : 'imgs/boxCoin.png', //cajas
-    'obstaculo'     : 'imgs/obstaculo.png', //obstaculo
+    'obstaculo'     : 'imgs/extra.png', //obstaculo
     'bitcoin'       : 'imgs/bitcoin.png', //bitcoins
     'plus'          : 'imgs/plus.png', //power up doble salto
     'caja'          : 'imgs/Caja.png', //caja pregunta
@@ -27,18 +24,23 @@ var assetLoader = (function() {
     'plane'         : 'imgs/plane.png' //power up volador
   };
 
-  // diccionario de sonidos
+  //#region diccionario de sonidos
   this.sounds      = {
-    'bg'            : 'sounds/bg.mp3',
+    'inicio'        : 'sounds/toystory1.mp3',
+    'bg'            : 'sounds/toystory2.mp3',
     'jump'          : 'sounds/jump.mp3',
     'gameOver'      : 'sounds/gameOver.mp3',
     'Tictac'        : 'sounds/Tictac.mp3'
   };
+  //#endregion
+
+  //#region Codigo
 
   var assetsLoaded = 0;                                // how many assets have been loaded
   var numImgs      = Object.keys(this.imgs).length;    // total number of image assets
   var numSounds    = Object.keys(this.sounds).length;  // total number of sound assets
   this.totalAssest = numImgs;                          // total number of assets
+
 
   /**
    * Asegura que estan seteados todos los assets
@@ -123,4 +125,7 @@ var assetLoader = (function() {
     totalAssest: this.totalAssest,
     downloadAll: this.downloadAll
   };
-})();
+})
+
+//#endregion
+();

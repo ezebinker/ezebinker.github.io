@@ -3,7 +3,7 @@
 var questions = [
      {
        prompt: "¿Quien es el director de info?",
-       opciona: "Moni",
+       opciona: "Fede",
        opcionb: "Binker",
        opcionc: "Dami",
        answer: "Dami"

@@ -7,7 +7,7 @@ function enviarPuntaje(score, preguntascorrectas)
   var name=document.getElementById('myForm-Name').value;
 
   var xhr = new XMLHttpRequest();
-          xhr.open('POST', 'http://localhost/inforunner/insertar.php?name='+name+'&score='+score+'&pc='+preguntascorrectas, true);
+          xhr.open('POST', 'http://10.128.20.20/inforunner/insertar.php?name='+name+'&score='+score+'&pc='+preguntascorrectas, true);
           xhr.withCredentials = true;
           xhr.onreadystatechange = function() {
             if (xhr.readyState === 2) {
@@ -18,5 +18,6 @@ function enviarPuntaje(score, preguntascorrectas)
           xhr.send(name);
 
   $('#myForm').hide();
+  $('.enviar').hide();
   document.getElementById('myForm-Name').value="";
 }

@@ -2,7 +2,7 @@
 // define variables
 var canvas = document.getElementById('canvas');
 
-// Add event listener for `click` events.
+//#region ClickMouse
 canvas.addEventListener('click', function(event) {
   // Evento de salto si no está saltando, cayendo, o hay un bonus de vuelo activo
   if (player.dy === 0 && player.y>=platformHeight && cont<posiblessaltos && tiempovuela==300) {
@@ -16,7 +16,6 @@ canvas.addEventListener('click', function(event) {
   if(!player.isJumping){
     cont=0;
   }
-
 
   jumpCounter = Math.max(jumpCounter-1, 0);
   this.advance();
@@ -40,14 +39,15 @@ canvas.addEventListener('click', function(event) {
   player.anim.update();
 
 }, false);
+//#endregion
 
 var ctx = canvas.getContext('2d'); //esta es la variable que permite manipular el canvas
 var pregunta=false, vuela=false;
 var player, score, preguntascorrectas=0, idpreguntaactual=0, velocidadanterior, textopregunta,opciona,opcionb,opcionc, stop, ticker, posiblessaltos=1, bonussaltos=100, tiempovuela=300;
-var ground = [], water = [], enemies = [], environment = [], bitcoins = [], plus=[], caja =[], plane=[];
+var ground = [], enemies = [], environment = [], bitcoins = [], plus=[], caja =[], plane=[];
 var listaPreguntas=[];
 
-// variables de plataforma
+//#region variables de plataforma
 var platformHeight, platformLength, gapLength;
 var platformWidth = 32;
 var platformBase = canvas.height - platformWidth;  // setea el bottom de la plataforma
@@ -234,12 +234,13 @@ Vector.prototype.minDist = function(vec) {
 
   return Math.sqrt(minDist);
 };
+//#endregion
 
 /**
  * Objeto player
  */
 var player = (function(player) {
-  if(this.imgs['avatar_normal']=='imgs/personajes/personajeMonstr.png'){
+  if(this.imgs['avatar_normal']=='imgs/personajes/personajeWoody.png'){
   player.width     = 70;
   player.height    = 70;
   player.speed     = 6;
@@ -250,8 +251,8 @@ var player = (function(player) {
   player.isFalling = false;
   player.isJumping = false;
 
-  player.sheet     = new SpriteSheet('imgs/personajes/personajeMonstr.png', player.width, player.height);
-  player.walkAnim  = new Animation(player.sheet, 3, 0, 14);
+  player.sheet     = new SpriteSheet('imgs/personajes/personajeWoody.png', player.width, player.height);
+  player.walkAnim  = new Animation(player.sheet, 7, 0, 5);
   player.jumpAnim  = new Animation(player.sheet, 4, 14, 14);
   player.fallAnim  = new Animation(player.sheet, 4, 11, 11);
   player.anim      = player.walkAnim;
@@ -363,6 +364,8 @@ var player = (function(player) {
   return player;
 })(Object.create(Vector.prototype));
 
+//#region 
+
 /**
  * @param {integer} x - Posición x de inicio del player
  * @param {integer} y - Posición y de inicio del player
@@ -402,6 +405,8 @@ function limitText(limitField, limitCount, limitNum) {
 		limitCount.value = limitNum - limitField.value.length;
 	}
 }
+
+//#endregion
 
 function continuarEjecucion(){
           verificapregunta("",listaPreguntas[idpreguntaactual].answer);
@@ -451,6 +456,8 @@ function getType() {
   return type;
 }
 
+//#region Update de elementos
+
 /**
  * Actualiza la posición del suelo y la dibuja. Chequea colisión con el player
  */
@@ -468,7 +475,7 @@ function updateGround() {
         angle < -50) {
       player.isJumping = false;
       player.isFalling = false;
-      player.y = ground[i].y - player.height + 5;
+      player.y = ground[i].y - player.height + 1;
       player.dy = 0;
     }
   }
@@ -476,24 +483,6 @@ function updateGround() {
   // Borra el piso que se encuentra fuera de la pantalla
   if (ground[0] && ground[0].x < -platformWidth) {
     ground.splice(0, 1);
-  }
-}
-
-/**
- * Actualiza la posición del agua
- */
-function updateWater() {
-  // Anima al agua
-  for (var i = 0; i < water.length; i++) {
-    water[i].update();
-    water[i].draw();
-  }
-
-  // Borra el agua que se encuentra fuera de la pantalla
-  if (water[0] && water[0].x < -platformWidth) {
-    var w = water.splice(0, 1)[0];
-    w.x = water[water.length-1].x + platformWidth;
-    water.push(w);
   }
 }
 
@@ -523,7 +512,7 @@ function updateEnemies() {
     enemies[i].draw();
 
     // Player choca a un enemigo
-    if (player.minDist(enemies[i]) <= player.width - platformWidth/2) {
+    if (player.minDist(enemies[i]) <= player.width - platformWidth-15 && player.minDist(enemies[i]) <= player.height/2 + platformWidth/2) {
       gameOver();
     }
   }
@@ -544,7 +533,7 @@ function updateBitcoins() {
     bitcoins[i].draw();
 
     // Player choca a un bitcoin
-    if (player.minDist(bitcoins[i]) <= player.width - platformWidth/2) {
+    if (player.minDist(bitcoins[i]) <= player.width - platformWidth-15 && player.minDist(bitcoins[i]) <= player.height/2 + platformWidth/2) {
       bitcoins.splice(i,1);
       sumoPuntos();
     }
@@ -570,6 +559,18 @@ function updateCaja() {
 }
 
 /**
+ * Actualiza la posición del player y lo dibuja
+ */
+function updatePlayer() {
+  player.update();
+  player.draw();
+  // GAME OVER
+  if (player.y + player.height >= canvas.height) {
+    gameOver();
+  }
+}
+
+/**
  * Actualiza la posición de los signos mas y los dibuja. Chequea colisión con el player
  */
 function updatePlus() {
@@ -579,7 +580,7 @@ function updatePlus() {
     plus[i].draw();
 
     // Player choca a un +
-    if (player.minDist(plus[i]) <= player.width - platformWidth/2) {
+    if (player.minDist(plus[i]) <= player.width - platformWidth-15 && player.minDist(plus[i]) <= player.height/2 + platformWidth/2) {
       plus.splice(i,1);
       cambioSaltos();
     }
@@ -601,7 +602,7 @@ function updatePlane() {
     plane[i].draw();
 
     // Player choca a un +
-    if (player.minDist(plane[i]) <= player.width - platformWidth/2) {
+    if (player.minDist(plane[i]) <= player.width - platformWidth-15 && player.minDist(plane[i]) <= player.height/2 + platformWidth/2) {
       plane.splice(i,1);
       velocidadanterior=ticker;
       ticker=500;
@@ -614,6 +615,8 @@ function updatePlane() {
     plane.splice(0, 1);
   }
 }
+
+//#endregion
 
 function sumoPuntos(){
     score+=65;
@@ -633,17 +636,7 @@ function cambioSaltos(){
   posiblessaltos=2;
 }
 
-/**
- * Actualiza la posición del player y lo dibuja
- */
-function updatePlayer() {
-  player.update();
-  player.draw();
-  // GAME OVER
-  if (player.y + player.height >= canvas.height) {
-    gameOver();
-  }
-}
+//#region Dibujo elementos y determino posibles saltos
 
 function spawnSprites() {
   // incrementa puntos
@@ -705,6 +698,9 @@ function spawnSprites() {
     platformLength = rand(Math.floor(player.speed/2), player.speed * 4);
   }
 }
+//#endregion
+
+//#region Spawn elementos
 
 function spawnEnvironmentSprites() {
   if (score > 40 && rand(0, 20) === 0 && platformHeight < 3) {
@@ -713,18 +709,6 @@ function spawnEnvironmentSprites() {
         canvas.width + platformWidth % player.speed,
         platformBase - platformHeight * platformSpacer - platformWidth,
         'plant'
-      ));
-    }
-    else if (platformLength > 2) {
-      environment.push(new Sprite(
-        canvas.width + platformWidth % player.speed,
-        platformBase - platformHeight * platformSpacer - platformWidth,
-        'bush1'
-      ));
-      environment.push(new Sprite(
-        canvas.width + platformWidth % player.speed + platformWidth,
-        platformBase - platformHeight * platformSpacer - platformWidth,
-        'bush2'
       ));
     }
   }
@@ -790,6 +774,8 @@ function spawnPlaneSprites() {
   }
 }
 
+//#endregion
+
 /**
  * LOOP DEL JUEGO
  */
@@ -806,7 +792,6 @@ function animate() {
     background.draw();
 
     // Actualiza entidades
-    updateWater();
     updateEnvironment();
     updatePlayer();
     updateGround();
@@ -818,9 +803,7 @@ function animate() {
 
     // Dibuja el puntaje
     ctx.font = 'bolder 25px Audiowide';
-    ctx.fillStyle='white';
-    ctx.strokeStyle = 'black';
-    ctx.strokeText('Puntaje: ' + score, canvas.width - 190, 30);
+    ctx.fillStyle='black';
 
     ctx.fillText('Puntaje: ' + score, canvas.width - 190, 30);
 
@@ -832,7 +815,7 @@ function animate() {
 
     if(vuela && tiempovuela>0){
       ctx.fillStyle='black';
-      ctx.fillText('Bonus Volador Activo ' + tiempovuela, canvas.width - 380, 85);
+      ctx.fillText('Bonus Volador Activo ' + tiempovuela, canvas.width - 370, 85);
       if(player.y>=20){
         player.y-=10;
       }
@@ -876,13 +859,12 @@ function animate() {
     ticker++;
   }
   else { //todo lo que sucede cuando el juego está pausado, sea por pregunta o por gameover
-    document.getElementById("canvas").style.opacity = "0.5";
+    document.getElementById("canvas").style.opacity = "0.7";
   }
 }
 
-/**
- * Eventos del teclado
- */
+//#region Eventos del teclado
+
 var KEY_CODES = {
   32: 'space'
 };
@@ -932,7 +914,12 @@ function mainMenu() {
   $('#main').show();
   $('#menu').addClass('main');
   $('.sound').show();
+  assetLoader.sounds.inicio.currentTime=0;
+  assetLoader.sounds.inicio.play();
+
 }
+
+//#endregion
 
 /**
  * Comienza el juego, resetea variables, etc.
@@ -944,7 +931,6 @@ function startGame() {
   console.log(listaPreguntas);
   player.speed = 6;
   ground = [];
-  water = [];
   environment = [];
   enemies = [];
   bitcoins=[];
@@ -965,27 +951,19 @@ function startGame() {
   tiempovuela=300;
   vuela=false;
 
-
-
-  //ctx.font = '16px arial, sans-serif';
-
   for (var i = 0; i < 30; i++) {
     ground.push(new Sprite(i * (platformWidth-3), platformBase - platformHeight * platformSpacer, 'grass'));
-  }
-
-  for (i = 0; i < canvas.width / 32 + 2; i++) {
-    water.push(new Sprite(i * platformWidth, platformBase, 'water'));
   }
 
   background.reset();
   animate();
 
+  assetLoader.sounds.inicio.pause();
   assetLoader.sounds.gameOver.pause();
   assetLoader.sounds.bg.currentTime = 0;
   assetLoader.sounds.bg.loop = true;
   assetLoader.sounds.bg.play();
 }
-
 
 //funcion random para agarrar un valor de pregunta
   function randomPreguntas(){
@@ -1004,6 +982,7 @@ function gameOver() {
   $('#correcta').hide();
   $('#game-over').show();
   $('#myForm').show();
+  $('.enviar').show();
   assetLoader.sounds.bg.pause();
   assetLoader.sounds.gameOver.currentTime = 0;
   assetLoader.sounds.gameOver.play();
@@ -1077,6 +1056,8 @@ $('.enviar').click(function() {
 $('.almenu').click(function() {
   $('#game-over').hide();
   document.getElementById('game-over').style.display = 'none';
+  assetLoader.sounds.inicio.currentTime = 0;
+  assetLoader.sounds.inicio.play();
   $('#credits').hide();
   $('#menu').show();
   $('#main').show();
