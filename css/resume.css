@@ -73,7 +73,9 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #1CBCD3;
+  /*background-color: #1CBCD3;*/
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 .dev-icons {
