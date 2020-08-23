@@ -82,7 +82,7 @@ p.lead {
   font-size: 3rem;
 }
 
-.dev-icons .list-inline-item i:hover {
+.dev-icons .list-inline-item :hover {
   color: #1CBCD3;
 }
 
