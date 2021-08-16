@@ -1,10 +1,10 @@
 <h1 align="center">Hola 👋, soy Ezequiel Binker</h1>
-<h3 align="center">Licenciado en IT. Docente de Programación y Desarrollador Freelance</h3>
+<h3 align="center">Licenciado en Sistemas. Profesor de Programación y Desarrollador Freelance</h3>
 <br>
 
-- 🔭 Trabajo como **Docente de nivel secundario y terciario en ORT Argentina**
+- 🔭 Trabajo como **Profesor de Programación en ORT Argentina**
 
-- 🌱 Estoy capacitándome en **React.js, React Native y Stack MERN**
+- 🌱 Estoy capacitándome en **React Native, MERN Stack y Desarrollo de Smart Contracts con Solidity**
 
 - 👨🏻‍💻 Soy Licenciado en IT recibido en **Universidad de Palermo**
 
@@ -12,7 +12,7 @@
 
 - 📫 Mi casilla de correo: **[ezebinker@gmail.com](mailto:ezebinker@gmail.com)**
 
-- 📄 Conoce un poco más sobre mí: [Sitio Personal](https://binker.com.ar)
+- 📄 Conoce un poco más sobre mí: <a href="https://binker.com.ar" target="_blank">Sitio Personal</a>
 
 <h2 align="left">Contacto</h3>
 <p align="left">
