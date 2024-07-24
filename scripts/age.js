@@ -6,9 +6,6 @@
         document.getElementById("age").innerHTML= getAge("1994/12/04")
     });
 
-    /**
-     * Function gets called when page is loaded.
-     */
     function getAge(dateParam) {
         const today = new Date();
         const birthDate = new Date(dateParam);
@@ -19,5 +16,4 @@
         }
         return age
     }
-
 })();
