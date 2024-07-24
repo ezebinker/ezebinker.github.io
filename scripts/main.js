@@ -77,7 +77,6 @@
     var img = e.querySelector('img')
     // set the link present on the item to the caption in full view
     img.dataset.caption = '<a class="link-light" target="_blank" href="' + e.href + '">' + caption.innerHTML + '</a>';
-    window.console.log(caption, img)
      e.addEventListener("click", (function(t){
        t.preventDefault();
        BigPicture({
