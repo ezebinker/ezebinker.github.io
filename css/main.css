@@ -269,3 +269,8 @@ footer a:not(.nav-link) {
 .entry-title a {
   text-decoration: none;
 }
+
+.project-link {
+  text-decoration: none;
+  font-weight: 600;
+}
