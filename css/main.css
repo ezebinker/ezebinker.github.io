@@ -128,6 +128,7 @@ img.avatar {
   display: block;
   width: 100%;
   max-width: 100%;
+  height: auto;
 }
 
 /* Portfolio */
@@ -273,4 +274,12 @@ footer a:not(.nav-link) {
 .project-link {
   text-decoration: none;
   font-weight: 600;
+}
+
+/* Skills badges */
+#skills .badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #333;
+  padding: 0.45em 0.85em;
 }

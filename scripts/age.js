@@ -2,8 +2,7 @@
     "use strict";
 
     window.addEventListener('load', () => {
-        document.getElementById("yearsEducator").innerHTML = getAge("2014/06/23")
-        document.getElementById("age").innerHTML= getAge("1994/12/04")
+        document.getElementById("age").innerHTML = getAge("1994/12/04")
     });
 
     function getAge(dateParam) {
