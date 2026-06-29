@@ -18,7 +18,7 @@
   <meta name="twitter:description" content="Desarrollador full stack y líder técnico con experiencia en React, Node.js y TypeScript.">
   <meta name="twitter:image" content="https://github.com/ezebinker.png">
   <title>Ezequiel Binker</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230d6efd'/><text y='.9em' font-size='70' x='50%' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>E</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230d6efd'/><text x='50' y='68' font-size='44' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>EB</text></svg>">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
   <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap" />
@@ -29,7 +29,6 @@
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap" />
   </noscript>
-  <link href="./css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
   <link href="./css/bootstrap-icons/bootstrap-icons.css?ver=1.2.0" rel="stylesheet">
   <link href="./css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
   <link href="./css/aos.css?ver=1.2.0" rel="stylesheet">
@@ -69,7 +68,7 @@
             <li class="nav-item"><a class="nav-link" href="#certifications" data-i18n="nav-certifications">Certificaciones</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav-contact">Contacto</a></li>
           </ul>
-          <button id="lang-toggle" class="btn btn-sm btn-outline-secondary ms-2" onclick="toggleLang()">EN</button>
+          <button id="lang-toggle" class="btn btn-sm btn-outline-secondary ms-2 my-2 my-lg-0" onclick="toggleLang()">EN</button>
         </div>
       </div>
     </nav>
@@ -92,15 +91,15 @@
                       <ul class="nav justify-content-left">
                         <li class="nav-item"><a class="nav-link" target="_blank"
                             href="https://www.linkedin.com/in/ezequielbinker/" title="LinkedIn"><i
-                              class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a></li>
+                              class="bi-linkedin"></i></a></li>
                         <li class="nav-item"><a class="nav-link" target="_blank" href="https://www.github.com/ezebinker"
-                            title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">GitHub</span></a></li>
+                            title="Github"><i class="bi-github"></i></a></li>
                       </ul>
                     </nav>
                   </div>
                   <div class="mt-3" data-aos="fade-up" data-aos-delay="200"><a
                       class="btn btn-primary shadow-sm mt-1 hover-effect" href="#contact"><span data-i18n="hero-cta">Contactame!</span> <i
-                        class="fas fa-arrow-right"></i></a></div>
+                        class="bi-arrow-right"></i></a></div>
                 </div>
               </div>
             </div>
@@ -111,28 +110,18 @@
 
       <div class="section pt-4 px-3 px-lg-4" id="about">
         <div class="container-narrow">
-          <div class="row">
+          <div class="row align-items-center">
             <div class="col-md-6">
               <h2 class="h4 my-2" data-i18n="about-title">Hola! Me llamo Ezequiel Binker.</h2>
               <p data-i18n="about-p">Soy Licenciado en Sistemas recibido en la Universidad de Palermo. Cuento con experiencia en el mercado como desarrollador backend para un banco canadiense y como desarrollador full stack y líder técnico para una consultora mexicana. Además, hace más de 10 años trabajo en educación tecnológica, transmitiendo los conceptos y buenas prácticas de programación a cientos de jóvenes de nivel secundario y terciario. Actualmente soy Manager en Accenture, al frente de un equipo de desarrolladores full stack en Business Insights &amp; Analytics, área de Corporate Finance.</p>
-              <div class="row mt-3">
-                <div class="col-sm-2">
-                  <div class="pb-1" data-i18n="about-age-label">Edad:</div>
-                </div>
-                <div class="col-sm-10">
-                  <div class="pb-1 fw-bolder"><span id="age"></span> <span data-i18n="about-age-unit">años</span></div>
-                </div>
-                <div class="col-sm-2">
-                  <div class="pb-1" data-i18n="about-email-label">Email:</div>
-                </div>
-                <div class="col-sm-10">
-                  <div class="pb-1 fw-bolder">ezebinker@gmail.com</div>
-                </div>
+              <div class="d-flex align-items-center gap-3 mt-3 flex-wrap">
+                <a class="btn btn-primary btn-sm hover-effect" href="#contact" data-i18n="hero-cta">Contactame!</a>
+                <a class="btn btn-outline-secondary btn-sm about-icon-btn" href="https://www.linkedin.com/in/ezequielbinker/" target="_blank" aria-label="LinkedIn"><i class="bi-linkedin"></i></a>
+                <a class="btn btn-outline-secondary btn-sm about-icon-btn" href="https://www.github.com/ezebinker" target="_blank" aria-label="GitHub"><i class="bi-github"></i></a>
               </div>
             </div>
-            <div class="col-md-5 offset-md-1" data-aos="fade-left" data-aos-delay="100"><img
-                class="avatar img-fluid mt-2 rounded-circle" src="https://github.com/ezebinker.png" width="400"
-                height="400" alt="Ezequiel Binker" />
+            <div class="col-md-5 offset-md-1 d-none d-md-block" data-aos="fade-left" data-aos-delay="100">
+              <img class="profile-photo img-fluid mt-2" src="images/profile.jpeg" width="300" height="300" alt="Ezequiel Binker" />
             </div>
           </div>
         </div>
@@ -184,6 +173,7 @@
                 <span class="badge rounded-pill text-bg-light border">Azure OpenAI</span>
                 <span class="badge rounded-pill text-bg-light border">Agents SDK</span>
                 <span class="badge rounded-pill text-bg-light border">SQL Server</span>
+                <span class="badge rounded-pill text-bg-light border">PostgreSQL</span>
                 <span class="badge rounded-pill text-bg-light border">Power Automate</span>
               </div>
             </div>
@@ -214,7 +204,7 @@
                       <h3 class="h5 mb-1" data-i18n="acn-title">Líder de Desarrollo Web</h3>
                       <div class="text-muted text-small">Accenture. <small data-i18n="acn-dates">(Nov 2024 - Presente)</small></div>
                     </div>
-                    <img src="images/acn-logo.png" width="48" height="48" alt="accenture" />
+                    <img src="images/accenture_logo.jpeg" width="48" height="48" alt="accenture" />
                   </div>
                 </div>
                 <div class="card-body px-3 py-2">
@@ -283,26 +273,6 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="card mb-3" data-aos="fade-left" data-aos-delay="400">
-                <div class="card-header px-3 py-2">
-                  <div class="d-flex justify-content-between">
-                    <div>
-                      <h3 class="h5 mb-1" data-i18n="free-title">Desarrollador Full Stack</h3>
-                      <div class="text-muted text-small">Freelance. <small data-i18n="free-dates">(Mar 2019 - Nov 2024)</small></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body px-3 py-2">
-                  <p class="mb-1 fw-bold text-small" data-i18n="label-projects">Proyectos destacados</p>
-                  <ul class="text-small mb-0">
-                    <li data-i18n="free-p1">Contrato inteligente en Solidity generador de NFTs para un modelo de negocio de Real Estate</li>
-                    <li data-i18n="free-p2">Bot Docente: proyecto en Python con Telegram Bot API y librerías de NLP (SpaCy / NLTK)</li>
-                    <li data-i18n="free-p3">Aplicación en React para el sistema de gestión de pagos de una entidad educativa</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
               <div class="card mb-3" data-aos="fade-left" data-aos-delay="300">
                 <div class="card-header px-3 py-2">
                   <div class="d-flex justify-content-between">
@@ -338,20 +308,20 @@
           </div>
           <div class="row">
             <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-delay="100">
-              <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2" data-i18n="test-1">Ezequiel
+              <div class="d-flex ms-md-3"><span><i class="bi-quote fs-3"></i></span><span class="m-2" data-i18n="test-1">Ezequiel
                   fue muy didáctico y transmitió los contenidos de la cursada de una manera que se me hizo muy fácil de
                   entender. Siempre estuvo a disposición para despejar dudas y fue realmente de ayuda en la resolución
                   de los distintos ejercicios.</span></div>
               <div class="text-end text-muted text-small mt-2 me-2" data-i18n="test-attr-1">— Ex-alumno</div>
             </div>
             <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="300">
-              <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2" data-i18n="test-2">Su
+              <div class="d-flex ms-md-3"><span><i class="bi-quote fs-3"></i></span><span class="m-2" data-i18n="test-2">Su
                   dedicación, compromiso, adaptabilidad e ingenio han colaborado en lograr que los proyectos planteados
                   por todo el equipo se logren y generen un alto impacto en estudiantes y docentes.</span></div>
               <div class="text-end text-muted text-small mt-2 me-2" data-i18n="test-attr-2">— Ex-alumno</div>
             </div>
             <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-delay="200">
-              <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2" data-i18n="test-3">Desde
+              <div class="d-flex ms-md-3"><span><i class="bi-quote fs-3"></i></span><span class="m-2" data-i18n="test-3">Desde
                   muy joven ha demostrado ser un profesional sumamente responsable, destacado por su compromiso, calidad
                   humana, capacidad de escucha, trabajo en equipo, movilizador de ideas y proyectos, y una gran humildad
                   para seguir superandose. Cada vez que recibió mas tareas, responsabilidades y compromisos, logró
@@ -359,7 +329,7 @@
               <div class="text-end text-muted text-small mt-2 me-2" data-i18n="test-attr-3">— Director de Informática</div>
             </div>
             <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="400">
-              <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span class="m-2" data-i18n="test-4">Sin duda
+              <div class="d-flex ms-md-3"><span><i class="bi-quote fs-3"></i></span><span class="m-2" data-i18n="test-4">Sin duda
                   alguna uno de los mejores profesores de programación que he tenido no solo por su conocimiento en el
                   área, sino también por su gran capacidad para transmitir dichos conocimientos, logrando que cada clase
                   sea indispensable y entretenida. Es una persona dedicada que siempre nos ha sabido guiar en nuestro
@@ -435,88 +405,145 @@
         </div>
       </div>
 
-      <div class="section px-2 px-lg-4 pt-5" id="certifications">
-        <div class="container">
+      <div class="section px-3 px-lg-4 pt-5" id="certifications">
+        <div class="container-narrow">
           <div class="text-center mb-5">
             <h2 class="marker marker-center" data-i18n="cert-title">Certificaciones</h2>
           </div>
-          <div class="grid bp-gallery pb-3 mx-4" data-aos="zoom-in-up" data-aos-delay="100">
-            <div class="grid-sizer"></div>
-            <div class="grid-item">
-              <a href="https://www.credly.com/badges/afba46d9-f6ef-40f5-91be-2c774ac11c62">
-                <figure class="portfolio-item"><img src="images/certifications/People_Leadership_Accenture.png"
-                    data-bp="images/certifications/People_Leadership_Accenture_Full.png" width="300" height="300" />
-                  <figcaption>
-                    <h4 class="h5 mb-0">People Leadership Credential - Level 1</h4>
-                    <div>Accenture</div>
-                  </figcaption>
-                </figure>
-              </a>
+          <div class="cert-list" data-aos="fade-up" data-aos-delay="100">
+
+            <!-- Udemy: Terraform -->
+            <div class="cert-item">
+              <div class="cert-logo cert-logo-img"><img src="images/udemy_logo.jpeg" alt="Udemy"></div>
+              <div class="cert-info">
+                <div class="cert-name">HashiCorp Terraform: The Ultimate Beginner's Guide with Labs</div>
+                <div class="cert-meta">Udemy · jun. 2026</div>
+              </div>
+              <a class="cert-link" href="https://www.udemy.com/certificate/UC-06ded1c8-a5fc-4873-a77a-84800caa1990/" target="_blank" data-i18n="cert-verify">Ver credencial ↗</a>
             </div>
-            <div class="grid-item"><a href="https://www.credly.com/badges/488975ef-8f29-4455-889a-ab02dfbb88b3">
-                <figure class="portfolio-item"><img src="images/certifications/Blockchain-IBM-Developer.png"
-                    data-bp="images/certifications/Blockchain-Developer-Full.png" width="300" height="300" />
-                  <figcaption>
-                    <h4 class="h5 mb-0">Blockchain Foundation Developer V2</h4>
-                    <div>IBM</div>
-                  </figcaption>
-                </figure>
-              </a></div>
-            <div class="grid-item"><a
-                href="https://www.credly.com/badges/17b73136-8fd7-4ca3-9764-b8322fa6b9eb?source=linked_in_profile">
-                <figure class="portfolio-item"><img src="images/certifications/Blockchain-IBM-Essentials.png"
-                    data-bp="images/certifications/Blockchain-Essentials-Full.png" width="300" height="300" />
-                  <figcaption>
-                    <h4 class="h5 mb-0">Blockchain Essentials V2</h4>
-                    <div>IBM</div>
-                  </figcaption>
-                </figure>
-              </a></div>
-            <div class="grid-item">
-                <figure class="portfolio-item"><img src="images/certifications/Coderhouse.png"
-                    data-bp="images/certifications/Certificado_Coderhouse.png" width="300" height="213" />
-                  <figcaption>
-                    <h4 class="h5 mb-0">Diseño UX/UI</h4>
-                    <div>Coderhouse</div>
-                  </figcaption>
-                </figure>
+
+            <!-- Anthropic group -->
+            <div class="cert-item cert-group-toggle" data-bs-toggle="collapse" data-bs-target="#anthropic-certs" role="button" aria-expanded="false">
+              <div class="cert-logo cert-logo-img"><img src="images/anthropicresearch_logo.jpeg" alt="Anthropic"></div>
+              <div class="cert-info">
+                <div class="cert-name" data-i18n="cert-anthropic-group">AI &amp; Agentes — 5 certificaciones</div>
+                <div class="cert-meta">Anthropic · 2026</div>
               </div>
-            <div class="grid-item">
-                <figure class="portfolio-item"><img src="images/certifications/PMI.png"
-                    data-bp="images/certifications/Certificado_PMI.png" width="300" height="213" />
-                  <figcaption>
-                    <h4 class="h5 mb-0">Gestión de Proyectos</h4>
-                    <div>Project Management Institute</div>
-                  </figcaption>
-                </figure>
+              <span class="cert-chevron">▾</span>
+            </div>
+            <div class="collapse" id="anthropic-certs">
+              <div class="cert-sublist">
+                <div class="cert-subitem">
+                  <span>AI Capabilities and Limitations</span>
+                  <a href="https://verify.skilljar.com/c/j8makap6meqn" target="_blank" data-i18n="cert-verify">Ver ↗</a>
+                </div>
+                <div class="cert-subitem">
+                  <span>Introduction to Agent Skills</span>
+                  <a href="https://verify.skilljar.com/c/hsi6djcy3993" target="_blank" data-i18n="cert-verify">Ver ↗</a>
+                </div>
+                <div class="cert-subitem">
+                  <span>Claude Code in Action</span>
+                  <a href="https://verify.skilljar.com/c/pzb895ueq4u2" target="_blank" data-i18n="cert-verify">Ver ↗</a>
+                </div>
+                <div class="cert-subitem">
+                  <span>AI Fluency Framework &amp; Foundations</span>
+                  <a href="https://verify.skilljar.com/c/9kzsws8p99b8" target="_blank" data-i18n="cert-verify">Ver ↗</a>
+                </div>
+                <div class="cert-subitem">
+                  <span>Claude 101</span>
+                  <a href="https://verify.skilljar.com/c/5wfvtx4veb8d" target="_blank" data-i18n="cert-verify">Ver ↗</a>
+                </div>
               </div>
-            <div class="grid-item">
-                <figure class="portfolio-item"><img src="images/certifications/Microsoft.jpg"
-                    data-bp="images/certifications/Certificado_Microsoft.png" width="300" height="213" />
-                  <figcaption>
-                    <h4 class="h5 mb-0">Visual Studio .NET</h4>
-                    <div>Microsoft</div>
-                  </figcaption>
-                </figure>
+            </div>
+
+            <!-- Accenture: Reinvention with Agentic AI -->
+            <div class="cert-item">
+              <div class="cert-logo cert-logo-img"><img src="images/accenture_logo.jpeg" alt="Accenture"></div>
+              <div class="cert-info">
+                <div class="cert-name">Reinvention with Agentic AI</div>
+                <div class="cert-meta">Accenture · feb. 2026</div>
               </div>
-            <div class="grid-item">
-                <figure class="portfolio-item"><img src="images/certifications/Rational.jpg"
-                    data-bp="images/certifications/Certificado_Rational.png" width="300" height="213" />
-                  <figcaption>
-                    <h4 class="h5 mb-0">Modelado de Sistemas <br> con Rational</h4>
-                    <div>IBM</div>
-                  </figcaption>
-                </figure>
+              <a class="cert-link" href="https://www.credly.com/badges/d765f13c-1d9b-450a-89df-cef6489c592a/linked_in_profile" target="_blank" data-i18n="cert-verify">Ver credencial ↗</a>
+            </div>
+
+            <!-- Udemy: AI Engineer Agentic Track -->
+            <div class="cert-item">
+              <div class="cert-logo cert-logo-img"><img src="images/udemy_logo.jpeg" alt="Udemy"></div>
+              <div class="cert-info">
+                <div class="cert-name">AI Engineer Agentic Track: The Complete Agent &amp; MCP Course</div>
+                <div class="cert-meta">Udemy · ene. 2026</div>
               </div>
-            <div class="grid-item">
-                <figure class="portfolio-item"><img src="images/certifications/Cessi.jpg"
-                    data-bp="images/certifications/Certificado_ERP.jpg" width="300" height="213" />
-                  <figcaption>
-                    <h4 class="h5 mb-0">Implementador ERP</h4>
-                    <div>CESSI</div>
-                  </figcaption>
-                </figure>
+              <a class="cert-link" href="https://www.udemy.com/certificate/UC-ee9f99dd-c0e3-4f01-b6cf-0739d9ebab8c/" target="_blank" data-i18n="cert-verify">Ver credencial ↗</a>
+            </div>
+
+            <!-- Udemy: Go -->
+            <div class="cert-item">
+              <div class="cert-logo cert-logo-img"><img src="images/udemy_logo.jpeg" alt="Udemy"></div>
+              <div class="cert-info">
+                <div class="cert-name">Go - The Complete Guide</div>
+                <div class="cert-meta">Udemy · dic. 2025</div>
               </div>
+              <a class="cert-link" href="https://www.udemy.com/certificate/UC-941f2af7-9f4a-45a1-ae6f-a08683a907cb/" target="_blank" data-i18n="cert-verify">Ver credencial ↗</a>
+            </div>
+
+            <!-- Google -->
+            <div class="cert-item">
+              <div class="cert-logo cert-logo-img"><img src="images/google_logo.jpeg" alt="Google"></div>
+              <div class="cert-info">
+                <div class="cert-name">IA de Google para educadores</div>
+                <div class="cert-meta">Google · ene. 2026</div>
+              </div>
+              <a class="cert-link" href="https://edu.exceedlms.com/student/award/Bo17rZSrYzbwJHj9SWD4kXhK" target="_blank" data-i18n="cert-verify">Ver credencial ↗</a>
+            </div>
+
+            <!-- Accenture: People Leadership -->
+            <div class="cert-item">
+              <div class="cert-logo cert-logo-img"><img src="images/accenture_logo.jpeg" alt="Accenture"></div>
+              <div class="cert-info">
+                <div class="cert-name">People Leadership Credential — Level 1</div>
+                <div class="cert-meta">Accenture · ago. 2025</div>
+              </div>
+              <a class="cert-link" href="https://www.credly.com/badges/afba46d9-f6ef-40f5-91be-2c774ac11c62" target="_blank" data-i18n="cert-verify">Ver credencial ↗</a>
+            </div>
+
+            <!-- IBM -->
+            <div class="cert-item">
+              <div class="cert-logo cert-logo-img"><img src="images/ibm_logo.jpeg" alt="IBM"></div>
+              <div class="cert-info">
+                <div class="cert-name">Blockchain Foundation Developer V2</div>
+                <div class="cert-meta">IBM</div>
+              </div>
+              <a class="cert-link" href="https://www.credly.com/badges/488975ef-8f29-4455-889a-ab02dfbb88b3" target="_blank" data-i18n="cert-verify">Ver credencial ↗</a>
+            </div>
+            <div class="cert-item">
+              <div class="cert-logo cert-logo-img"><img src="images/ibm_logo.jpeg" alt="IBM"></div>
+              <div class="cert-info">
+                <div class="cert-name">Blockchain Essentials V2</div>
+                <div class="cert-meta">IBM</div>
+              </div>
+              <a class="cert-link" href="https://www.credly.com/badges/17b73136-8fd7-4ca3-9764-b8322fa6b9eb" target="_blank" data-i18n="cert-verify">Ver credencial ↗</a>
+            </div>
+
+            <!-- Coderhouse -->
+            <div class="cert-item">
+              <div class="cert-logo cert-logo-img"><img src="images/coderhouse_logo.jpeg" alt="Coderhouse"></div>
+              <div class="cert-info">
+                <div class="cert-name">Diseño UX/UI</div>
+                <div class="cert-meta">Coderhouse</div>
+              </div>
+              <a class="cert-link" href="https://drive.google.com/file/d/18iIT8alzwfxRoFm3B02nHD2-cwt9HB8R/view" target="_blank" data-i18n="cert-verify">Ver credencial ↗</a>
+            </div>
+
+            <!-- PMI -->
+            <div class="cert-item">
+              <div class="cert-logo cert-logo-img"><img src="images/projectmanagementinstitute_logo.jpeg" alt="PMI"></div>
+              <div class="cert-info">
+                <div class="cert-name">Gestión de Proyectos</div>
+                <div class="cert-meta">Project Management Institute</div>
+              </div>
+              <a class="cert-link" href="https://drive.google.com/file/d/0B6wlMXQMS79IbjJxZVA3X0pGcFE/view?resourcekey=0-8PRUxUAZwS6bW_oii-YahQ" target="_blank" data-i18n="cert-verify">Ver credencial ↗</a>
+            </div>
+
           </div>
         </div>
       </div>
@@ -564,9 +591,9 @@
                 <ul class="nav justify-content-center">
                   <li class="nav-item"><a class="nav-link" target="_blank"
                       href="https://www.linkedin.com/in/ezequielbinker/" title="LinkedIn"><i
-                        class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a></li>
+                        class="bi-linkedin"></i></a></li>
                   <li class="nav-item"><a class="nav-link" target="_blank" href="https://www.github.com/ezebinker"
-                      title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">GitHub</span></a>
+                      title="Github"><i class="bi-github"></i></a>
                   </li>
                 </ul>
               </nav>
@@ -584,14 +611,10 @@
   <div id="scrolltop">
     <a class="btn btn-secondary" href="#top">
       <span class="icon">
-        <i class="fas fa-angle-up fa-x"></i>
+        <i class="bi-chevron-up"></i>
       </span>
     </a>
   </div>
-  <script src="./scripts/imagesloaded.pkgd.min.js?ver=1.2.0"></script>
-  <script src="./scripts/masonry.pkgd.min.js?ver=1.2.0"></script>
-  <script src="./scripts/BigPicture.min.js?ver=1.2.0"></script>
-  <script src="./scripts/purecounter.min.js?ver=1.2.0"></script>
   <script src="./scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
   <script src="./scripts/aos.min.js?ver=1.2.0"></script>
   <script src="./scripts/i18n.js?ver=1.3.0"></script>
