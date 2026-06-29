@@ -27,7 +27,6 @@
       'exp-title': 'Experiencia Laboral',
       'label-resp': 'Responsabilidades',
       'label-logros': 'Logros',
-      'label-projects': 'Proyectos destacados',
       'acn-title': 'Líder de Desarrollo Web',
       'acn-dates': '(Nov 2024 - Presente)',
       'acn-r1': 'Desarrollo web utilizando principalmente React.js y Node.js',
@@ -49,11 +48,6 @@
       'wad-l1': 'Liderazgo del proyecto core del banco a los 6 meses de ingreso',
       'wad-l2': 'Coaching de ingresantes transmitiendo filosofía y cultura de trabajo de la organización',
       'wad-l3': 'Mejora notable en el ritmo de salida de nuevas versiones del producto',
-      'free-title': 'Desarrollador Full Stack',
-      'free-dates': '(Mar 2019 - Nov 2024)',
-      'free-p1': 'Contrato inteligente en Solidity generador de NFTs para un modelo de negocio de Real Estate',
-      'free-p2': 'Bot Docente: proyecto en Python con Telegram Bot API y librerías de NLP (SpaCy / NLTK)',
-      'free-p3': 'Aplicación en React para el sistema de gestión de pagos de una entidad educativa',
       'ort-title': 'Docente de Informática',
       'ort-dates': '(Mar 2016 - Presente)',
       'ort-r1': 'Planificación y ejecución de clases de desarrollo web',
@@ -83,8 +77,6 @@
       'cert-verify': 'Ver credencial ↗',
       'cert-anthropic-group': 'AI &amp; Agentes - 5 certificaciones',
       'contact-title': 'Contacto',
-      'contact-name-label': 'Nombre',
-      'contact-msg-label': 'Mensaje',
       'contact-heading': 'Sigamos en contacto!',
       'contact-text-1': 'Podés escribirme directamente a mi correo personal.',
       'contact-text-2': '¡Gracias por visitar mi sitio web!',
@@ -114,7 +106,6 @@
       'exp-title': 'Work Experience',
       'label-resp': 'Responsibilities',
       'label-logros': 'Achievements',
-      'label-projects': 'Notable projects',
       'acn-title': 'Web Development Manager',
       'acn-dates': '(Nov 2024 - Present)',
       'acn-r1': 'Web development primarily using React.js and Node.js',
@@ -136,11 +127,6 @@
       'wad-l1': "Led the bank's core project after 6 months with the company",
       'wad-l2': "Onboarded new team members and transmitted the organization's work culture",
       'wad-l3': "Significantly improved the product's release pace after joining",
-      'free-title': 'Full Stack Developer',
-      'free-dates': '(Mar 2019 - Nov 2024)',
-      'free-p1': 'Smart contract in Solidity generating NFTs for a Real Estate business model',
-      'free-p2': 'Bot Docente: Python chatbot using Telegram Bot API and NLP libraries (SpaCy / NLTK)',
-      'free-p3': 'React application for a payment management system at an educational institution',
       'ort-title': 'Computer Science Teacher',
       'ort-dates': '(Mar 2016 - Present)',
       'ort-r1': 'Planning and delivering web development classes',
@@ -170,8 +156,6 @@
       'cert-verify': 'View credential ↗',
       'cert-anthropic-group': 'AI &amp; Agents - 5 certifications',
       'contact-title': 'Contact',
-      'contact-name-label': 'Name',
-      'contact-msg-label': 'Message',
       'contact-heading': "Let's keep in touch!",
       'contact-text-1': 'Feel free to reach out directly by email.',
       'contact-text-2': 'Thank you for visiting my website!',
@@ -191,9 +175,15 @@
     document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
     document.documentElement.lang = lang;
     currentLang = lang;
+    localStorage.setItem('lang', lang);
   }
 
   window.toggleLang = function () {
     applyLang(currentLang === 'es' ? 'en' : 'es');
   };
+
+  var savedLang = localStorage.getItem('lang');
+  if (savedLang && savedLang !== 'es') {
+    applyLang(savedLang);
+  }
 })();
