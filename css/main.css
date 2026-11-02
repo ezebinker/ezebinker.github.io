@@ -641,3 +641,43 @@ html[data-theme="dark"] .skip-link:focus {
 html[data-theme="dark"] .marker {
   color: inherit;
 }
+
+/* Navbar toggles (theme / language) */
+#theme-toggle,
+#lang-toggle {
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+#theme-toggle,
+#lang-toggle {
+  border-color: rgba(0, 0, 0, 0.18);
+  color: #495057;
+}
+
+#theme-toggle:hover,
+#lang-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.3);
+  color: #212529;
+}
+
+html[data-theme="dark"] #theme-toggle,
+html[data-theme="dark"] #lang-toggle {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #c4c8cc;
+}
+
+html[data-theme="dark"] #theme-toggle:hover,
+html[data-theme="dark"] #lang-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
