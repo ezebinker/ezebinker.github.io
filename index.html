@@ -3,23 +3,57 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Manager @ Accenture">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" data-i18n-content="meta-description"
+    content="Manager en Accenture al frente de un equipo full stack en Business Insights & Analytics (Corporate Finance). Más de 10 años en educación técnica.">
   <meta name="author" content="Ezequiel Binker">
-  <meta name="title" content="Ezequiel Binker | Manager @ Accenture">
+  <link rel="canonical" href="https://binker.com.ar/">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://binker.com.ar">
+  <meta property="og:url" content="https://binker.com.ar/">
+  <meta property="og:site_name" content="Ezequiel Binker">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:title" content="Ezequiel Binker | Manager @ Accenture">
-  <meta property="og:description"
-    content="Desarrollador full stack y líder técnico con experiencia en React, Node.js y TypeScript. Manager en Accenture.">
-  <meta property="og:image" content="https://github.com/ezebinker.png">
+  <meta property="og:description" data-i18n-content="meta-description"
+    content="Manager en Accenture al frente de un equipo full stack en Business Insights & Analytics (Corporate Finance). Más de 10 años en educación técnica.">
+  <meta property="og:image" content="https://binker.com.ar/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ezequiel Binker, Manager @ Accenture">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ezequiel Binker | Manager @ Accenture">
-  <meta name="twitter:description"
-    content="Desarrollador full stack y líder técnico con experiencia en React, Node.js y TypeScript.">
-  <meta name="twitter:image" content="https://github.com/ezebinker.png">
-  <title>Ezequiel Binker</title>
+  <meta name="twitter:description" data-i18n-content="meta-description"
+    content="Manager en Accenture al frente de un equipo full stack en Business Insights & Analytics (Corporate Finance). Más de 10 años en educación técnica.">
+  <meta name="twitter:image" content="https://binker.com.ar/images/og-image.png">
+  <title>Ezequiel Binker | Manager @ Accenture</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ezequiel Binker",
+    "url": "https://binker.com.ar/",
+    "image": "https://binker.com.ar/images/profile.jpeg",
+    "jobTitle": "Manager",
+    "worksFor": { "@type": "Organization", "name": "Accenture" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Universidad de Palermo" },
+      { "@type": "EducationalOrganization", "name": "Instituto Tecnológico ORT" }
+    ],
+    "knowsAbout": ["Team management", "Full stack development", "Digital transformation", "Technical education"],
+    "sameAs": [
+      "https://www.linkedin.com/in/ezequielbinker/",
+      "https://www.github.com/ezebinker"
+    ]
+  }
+  </script>
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230d6efd'/><text x='50' y='68' font-size='44' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>EB</text></svg>">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
@@ -34,7 +68,7 @@
   </noscript>
   <link href="./css/bootstrap-icons/bootstrap-icons.css?ver=1.2.0" rel="stylesheet">
   <link href="./css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
-  <link href="./css/main.css?ver=1.2.0" rel="stylesheet">
+  <link href="./css/main.css?ver=1.3.2" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-D74BSQ1T0S"></script>
   <script>
@@ -47,25 +81,26 @@
 </head>
 
 <body id="top">
+  <a class="visually-hidden-focusable skip-link" href="#about" data-i18n="skip-link">Saltar al contenido</a>
   <header class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="header-nav" role="navigation">
       <div class="container"><a class="link-dark navbar-brand site-title mb-0" href="#">Ezequiel Binker</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir menú" data-i18n-aria="nav-toggle-aria"><span
             class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto me-2">
             <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav-about">Acerca de Mí</a></li>
             <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav-skills">Conocimientos</a></li>
             <li class="nav-item"><a class="nav-link" href="#experience" data-i18n="nav-experience">Experiencia</a></li>
-            <li class="nav-item"><a class="nav-link" href="#testimonials"
-                data-i18n="nav-testimonials">Recomendaciones</a></li>
             <li class="nav-item"><a class="nav-link" href="#education" data-i18n="nav-education">Educación</a></li>
             <li class="nav-item"><a class="nav-link" href="#certifications"
                 data-i18n="nav-certifications">Certificaciones</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav-contact">Contacto</a></li>
           </ul>
-          <button id="lang-toggle" class="btn btn-sm btn-outline-secondary ms-2 my-2 my-lg-0"
+          <button id="theme-toggle" type="button" class="btn btn-sm btn-outline-secondary ms-2 my-2 my-lg-0"
+            aria-label="Cambiar a modo oscuro" data-i18n-aria="theme-aria"><i class="bi-moon-stars" aria-hidden="true"></i></button>
+          <button id="lang-toggle" type="button" class="btn btn-sm btn-outline-secondary ms-2 my-2 my-lg-0"
             onclick="toggleLang()">EN</button>
         </div>
       </div>
@@ -77,7 +112,7 @@
         <div class="cover bg-light">
           <div class="container px-3">
             <div class="row">
-              <div class="col-lg-6 p-2"><img class="img-fluid" src="images/illustrations/hello3.svg" alt="hello" />
+              <div class="col-lg-6 p-2"><img class="img-fluid" src="images/illustrations/hello3.svg" alt="" />
               </div>
               <div class="col-lg-6">
                 <div class="mt-5">
@@ -90,10 +125,10 @@
                     <nav role="navigation">
                       <ul class="nav justify-content-left">
                         <li class="nav-item"><a class="nav-link" target="_blank"
-                            href="https://www.linkedin.com/in/ezequielbinker/" title="LinkedIn"><i
+                            href="https://www.linkedin.com/in/ezequielbinker/" title="LinkedIn" aria-label="LinkedIn"><i
                               class="bi-linkedin"></i></a></li>
                         <li class="nav-item"><a class="nav-link" target="_blank" href="https://www.github.com/ezebinker"
-                            title="Github"><i class="bi-github"></i></a></li>
+                            title="GitHub" aria-label="GitHub"><i class="bi-github" aria-hidden="true"></i></a></li>
                       </ul>
                     </nav>
                   </div>
@@ -120,7 +155,7 @@
                   href="https://www.linkedin.com/in/ezequielbinker/" target="_blank" aria-label="LinkedIn"><i
                     class="bi-linkedin"></i></a>
                 <a class="btn btn-outline-secondary btn-sm about-icon-btn" href="https://www.github.com/ezebinker"
-                  target="_blank" aria-label="GitHub"><i class="bi-github"></i></a>
+                  target="_blank" aria-label="GitHub"><i class="bi-github" aria-hidden="true"></i></a>
               </div>
             </div>
             <div class="col-md-5 offset-md-1 d-none d-md-block">
@@ -184,10 +219,16 @@
             <div class="col-md-6">
               <p class="fw-bold mb-2" data-i18n="skills-mgmt">Gestión</p>
               <div class="d-flex flex-wrap gap-2">
+                <span class="badge rounded-pill text-bg-light border" data-i18n="sk-team">Gestión de equipos</span>
+                <span class="badge rounded-pill text-bg-light border" data-i18n="sk-techlead">Liderazgo técnico</span>
+                <span class="badge rounded-pill text-bg-light border" data-i18n="sk-coaching">Coaching y mentoring</span>
+                <span class="badge rounded-pill text-bg-light border" data-i18n="sk-project">Gestión de proyectos</span>
+                <span class="badge rounded-pill text-bg-light border" data-i18n="sk-product">Gestión de productos digitales</span>
+                <span class="badge rounded-pill text-bg-light border" data-i18n="sk-digital">Transformación digital</span>
+                <span class="badge rounded-pill text-bg-light border" data-i18n="sk-training">Formación técnica</span>
                 <span class="badge rounded-pill text-bg-light border">Agile / Scrum</span>
                 <span class="badge rounded-pill text-bg-light border">Azure DevOps</span>
                 <span class="badge rounded-pill text-bg-light border">Asana</span>
-                <span class="badge rounded-pill text-bg-light border">Liderazgo técnico</span>
               </div>
             </div>
           </div>
@@ -209,7 +250,7 @@
                       <div class="text-muted text-small">Accenture. <small data-i18n="acn-dates">(Nov 2024 -
                           Presente)</small></div>
                     </div>
-                    <img src="images/accenture_logo.jpeg" width="48" height="48" alt="accenture" />
+                    <img src="images/accenture_logo.jpeg" width="48" height="48" alt="" />
                   </div>
                 </div>
                 <div class="card-body px-3 py-2">
@@ -235,7 +276,7 @@
                       <h3 class="h5 mb-1" data-i18n="rexx-title">Desarrollador Full Stack y Líder Técnico</h3>
                       <div class="text-muted text-small">REXXAI. <small data-i18n="rexx-dates">(May 2024 - Nov
                           2024)</small></div>
-                    </div><img src="images/rexx-logo.png" width="64" height="64" alt="rexx" />
+                    </div><img src="images/rexx-logo.png" width="64" height="64" alt="" />
                   </div>
                 </div>
                 <div class="card-body px-3 py-2">
@@ -264,7 +305,7 @@
                       <h3 class="h5 mb-1" data-i18n="wad-title">Desarrollador Backend</h3>
                       <div class="text-muted text-small">Wadiah Capital. <small data-i18n="wad-dates">(Nov 2021 - Nov
                           2023)</small></div>
-                    </div><img src="images/wadiah-logo.webp" width="48" height="48" alt="wadiah capital" />
+                    </div><img src="images/wadiah-logo.webp" width="48" height="48" alt="" />
                   </div>
                 </div>
                 <div class="card-body px-3 py-2">
@@ -293,7 +334,7 @@
                       <h3 class="h5 mb-1" data-i18n="ort-title">Docente de Informática</h3>
                       <div class="text-muted text-small">ORT Argentina. <small data-i18n="ort-dates">(Mar 2016 -
                           Presente)</small></div>
-                    </div><img src="images/ort-logo.png" width="100" height="54.4" alt="ort" />
+                    </div><img src="images/ort-logo.png" width="100" height="54.4" alt="" />
                   </div>
                 </div>
                 <div class="card-body px-3 py-2">
@@ -317,50 +358,6 @@
         </div>
       </div>
 
-      <div class="section px-3 px-lg-4 pt-5" id="testimonials">
-        <div class="container-narrow">
-          <div class="text-center mb-5">
-            <h2 class="marker marker-center" data-i18n="test-title">Recomendaciones</h2>
-          </div>
-          <div class="row">
-            <div class="col-md-6 mb-5">
-              <div class="d-flex ms-md-3"><span><i class="bi-quote fs-3"></i></span><span class="m-2"
-                  data-i18n="test-1">Ezequiel
-                  fue muy didáctico y transmitió los contenidos de la cursada de una manera que se me hizo muy fácil de
-                  entender. Siempre estuvo a disposición para despejar dudas y fue realmente de ayuda en la resolución
-                  de los distintos ejercicios.</span></div>
-              <div class="text-end text-muted text-small mt-2 me-2" data-i18n="test-attr-1">— Ex-alumno</div>
-            </div>
-            <div class="col-md-6 mb-5">
-              <div class="d-flex ms-md-3"><span><i class="bi-quote fs-3"></i></span><span class="m-2"
-                  data-i18n="test-2">Su
-                  dedicación, compromiso, adaptabilidad e ingenio han colaborado en lograr que los proyectos planteados
-                  por todo el equipo se logren y generen un alto impacto en estudiantes y docentes.</span></div>
-              <div class="text-end text-muted text-small mt-2 me-2" data-i18n="test-attr-2">— Ex-alumno</div>
-            </div>
-            <div class="col-md-6 mb-5">
-              <div class="d-flex ms-md-3"><span><i class="bi-quote fs-3"></i></span><span class="m-2"
-                  data-i18n="test-3">Desde
-                  muy joven ha demostrado ser un profesional sumamente responsable, destacado por su compromiso, calidad
-                  humana, capacidad de escucha, trabajo en equipo, movilizador de ideas y proyectos, y una gran humildad
-                  para seguir superandose. Cada vez que recibió mas tareas, responsabilidades y compromisos, logró
-                  cumplir cada uno de los objetivos.</span></div>
-              <div class="text-end text-muted text-small mt-2 me-2" data-i18n="test-attr-3">— Director de Informática
-              </div>
-            </div>
-            <div class="col-md-6 mb-5">
-              <div class="d-flex ms-md-3"><span><i class="bi-quote fs-3"></i></span><span class="m-2"
-                  data-i18n="test-4">Sin duda
-                  alguna uno de los mejores profesores de programación que he tenido no solo por su conocimiento en el
-                  área, sino también por su gran capacidad para transmitir dichos conocimientos, logrando que cada clase
-                  sea indispensable y entretenida. Es una persona dedicada que siempre nos ha sabido guiar en nuestro
-                  proceso de aprendizaje, generando confianza y empatía con todos.</span></div>
-              <div class="text-end text-muted text-small mt-2 me-2" data-i18n="test-attr-4">— Ex-alumno</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="section px-3 px-lg-4 pt-5" id="education">
         <div class="container-narrow">
           <div class="text-center mb-5">
@@ -374,7 +371,7 @@
                     <div>
                       <h3 class="h5 mb-1" data-i18n="edu-1-degree">Licenciatura en Tecnologías de la Información</h3>
                       <div class="text-muted text-small">Universidad de Palermo <small>(2018-2020)</small></div>
-                    </div><img src="images/up-logo.png" width="64" height="64" alt="universidad de palermo" />
+                    </div><img src="images/up-logo.png" width="64" height="64" alt="" />
                   </div>
                 </div>
                 <div class="card-body px-3 py-2">
@@ -395,7 +392,7 @@
                       <h3 class="h5 mb-1" data-i18n="edu-2-degree">Tecnicatura en Análisis de Sistemas</h3>
                       <div class="text-muted text-small">Instituto Tecnológico ORT <small>(2013-2017)</small></div>
                     </div>
-                    <img src="images/ort-logo.png" width="100" height="54.4" alt="ort" />
+                    <img src="images/ort-logo.png" width="100" height="54.4" alt="" />
                   </div>
                 </div>
                 <div class="card-body px-3 py-2">
@@ -415,7 +412,7 @@
                       <h3 class="h5 mb-1" data-i18n="edu-3-degree">Bachiller Técnico - Informática</h3>
                       <div class="text-muted text-small">Escuela ORT <small>(2007-2012)</small></div>
                     </div>
-                    <img src="images/ort-logo.png" width="100" height="54.4" alt="ort" />
+                    <img src="images/ort-logo.png" width="100" height="54.4" alt="" />
                   </div>
                 </div>
                 <div class="card-body px-3 py-2">
@@ -438,7 +435,7 @@
 
             <!-- UdeSA: Finanzas para no financieros -->
             <div class="cert-item">
-              <div class="cert-logo cert-logo-img"><img src="images/udesa-logo.jpeg" alt="UdeSA"></div>
+              <div class="cert-logo cert-logo-img"><img src="images/udesa-logo.jpeg" alt=""></div>
               <div class="cert-info">
                 <div class="cert-name">Finanzas para no financieros</div>
                 <div class="cert-meta">Universidad de San Andrés · oct. 2026</div>
@@ -449,7 +446,7 @@
 
             <!-- Udemy: Terraform -->
             <div class="cert-item">
-              <div class="cert-logo cert-logo-img"><img src="images/udemy_logo.jpeg" alt="Udemy"></div>
+              <div class="cert-logo cert-logo-img"><img src="images/udemy_logo.jpeg" alt=""></div>
               <div class="cert-info">
                 <div class="cert-name">HashiCorp Terraform: The Ultimate Beginner's Guide with Labs</div>
                 <div class="cert-meta">Udemy · jun. 2026</div>
@@ -460,13 +457,13 @@
 
             <!-- Anthropic group -->
             <div class="cert-item cert-group-toggle" data-bs-toggle="collapse" data-bs-target="#anthropic-certs"
-              role="button" aria-expanded="false">
-              <div class="cert-logo cert-logo-img"><img src="images/anthropicresearch_logo.jpeg" alt="Anthropic"></div>
+              role="button" tabindex="0" aria-expanded="false" aria-controls="anthropic-certs">
+              <div class="cert-logo cert-logo-img"><img src="images/anthropicresearch_logo.jpeg" alt=""></div>
               <div class="cert-info">
                 <div class="cert-name" data-i18n="cert-anthropic-group">AI &amp; Agentes - 5 certificaciones</div>
                 <div class="cert-meta">Anthropic · 2026</div>
               </div>
-              <span class="cert-chevron">▾</span>
+              <span class="cert-chevron" aria-hidden="true">▾</span>
             </div>
             <div class="collapse" id="anthropic-certs">
               <div class="cert-sublist">
@@ -495,7 +492,7 @@
 
             <!-- Accenture: Reinvention with Agentic AI -->
             <div class="cert-item">
-              <div class="cert-logo cert-logo-img"><img src="images/accenture_logo.jpeg" alt="Accenture"></div>
+              <div class="cert-logo cert-logo-img"><img src="images/accenture_logo.jpeg" alt=""></div>
               <div class="cert-info">
                 <div class="cert-name">Reinvention with Agentic AI</div>
                 <div class="cert-meta">Accenture · feb. 2026</div>
@@ -507,7 +504,7 @@
 
             <!-- Udemy: AI Engineer Agentic Track -->
             <div class="cert-item">
-              <div class="cert-logo cert-logo-img"><img src="images/udemy_logo.jpeg" alt="Udemy"></div>
+              <div class="cert-logo cert-logo-img"><img src="images/udemy_logo.jpeg" alt=""></div>
               <div class="cert-info">
                 <div class="cert-name">AI Engineer Agentic Track: The Complete Agent &amp; MCP Course</div>
                 <div class="cert-meta">Udemy · ene. 2026</div>
@@ -518,7 +515,7 @@
 
             <!-- Udemy: Go -->
             <div class="cert-item">
-              <div class="cert-logo cert-logo-img"><img src="images/udemy_logo.jpeg" alt="Udemy"></div>
+              <div class="cert-logo cert-logo-img"><img src="images/udemy_logo.jpeg" alt=""></div>
               <div class="cert-info">
                 <div class="cert-name">Go - The Complete Guide</div>
                 <div class="cert-meta">Udemy · dic. 2025</div>
@@ -529,7 +526,7 @@
 
             <!-- Google -->
             <div class="cert-item">
-              <div class="cert-logo cert-logo-img"><img src="images/google_logo.jpeg" alt="Google"></div>
+              <div class="cert-logo cert-logo-img"><img src="images/google_logo.jpeg" alt=""></div>
               <div class="cert-info">
                 <div class="cert-name">IA de Google para educadores</div>
                 <div class="cert-meta">Google · ene. 2026</div>
@@ -540,7 +537,7 @@
 
             <!-- Accenture: People Leadership -->
             <div class="cert-item">
-              <div class="cert-logo cert-logo-img"><img src="images/accenture_logo.jpeg" alt="Accenture"></div>
+              <div class="cert-logo cert-logo-img"><img src="images/accenture_logo.jpeg" alt=""></div>
               <div class="cert-info">
                 <div class="cert-name">People Leadership Credential — Level 1</div>
                 <div class="cert-meta">Accenture · ago. 2025</div>
@@ -551,7 +548,7 @@
 
             <!-- IBM -->
             <div class="cert-item">
-              <div class="cert-logo cert-logo-img"><img src="images/ibm_logo.jpeg" alt="IBM"></div>
+              <div class="cert-logo cert-logo-img"><img src="images/ibm_logo.jpeg" alt=""></div>
               <div class="cert-info">
                 <div class="cert-name">Blockchain Foundation Developer V2</div>
                 <div class="cert-meta">IBM</div>
@@ -560,7 +557,7 @@
                 target="_blank" data-i18n="cert-verify">Ver credencial ↗</a>
             </div>
             <div class="cert-item">
-              <div class="cert-logo cert-logo-img"><img src="images/ibm_logo.jpeg" alt="IBM"></div>
+              <div class="cert-logo cert-logo-img"><img src="images/ibm_logo.jpeg" alt=""></div>
               <div class="cert-info">
                 <div class="cert-name">Blockchain Essentials V2</div>
                 <div class="cert-meta">IBM</div>
@@ -571,7 +568,7 @@
 
             <!-- Coderhouse -->
             <div class="cert-item">
-              <div class="cert-logo cert-logo-img"><img src="images/coderhouse_logo.jpeg" alt="Coderhouse"></div>
+              <div class="cert-logo cert-logo-img"><img src="images/coderhouse_logo.jpeg" alt=""></div>
               <div class="cert-info">
                 <div class="cert-name">Diseño UX/UI</div>
                 <div class="cert-meta">Coderhouse</div>
@@ -582,7 +579,7 @@
 
             <!-- PMI -->
             <div class="cert-item">
-              <div class="cert-logo cert-logo-img"><img src="images/projectmanagementinstitute_logo.jpeg" alt="PMI">
+              <div class="cert-logo cert-logo-img"><img src="images/projectmanagementinstitute_logo.jpeg" alt="">
               </div>
               <div class="cert-info">
                 <div class="cert-name">Gestión de Proyectos</div>
@@ -640,10 +637,10 @@
               <nav role="navigation">
                 <ul class="nav justify-content-center">
                   <li class="nav-item"><a class="nav-link" target="_blank"
-                      href="https://www.linkedin.com/in/ezequielbinker/" title="LinkedIn"><i
+                      href="https://www.linkedin.com/in/ezequielbinker/" title="LinkedIn" aria-label="LinkedIn"><i
                         class="bi-linkedin"></i></a></li>
                   <li class="nav-item"><a class="nav-link" target="_blank" href="https://www.github.com/ezebinker"
-                      title="Github"><i class="bi-github"></i></a>
+                      title="GitHub" aria-label="GitHub"><i class="bi-github" aria-hidden="true"></i></a>
                   </li>
                 </ul>
               </nav>
@@ -651,7 +648,7 @@
           </div>
           <div class="text-small text-secondary">
             <div class="mb-1">&copy;
-              <script>document.write(new Date().getFullYear())</script> Ezequiel Binker. <span
+              <span id="year"></span> Ezequiel Binker. <span
                 data-i18n="footer-rights">Todos los derechos reservados</span>
             </div>
           </div>
@@ -660,16 +657,16 @@
     </div>
   </div>
   <div id="scrolltop">
-    <a class="btn btn-secondary" href="#top">
+    <a class="btn btn-secondary" href="#top" aria-label="Volver arriba" data-i18n-aria="top-aria">
       <span class="icon">
-        <i class="bi-chevron-up"></i>
+        <i class="bi-chevron-up" aria-hidden="true"></i>
       </span>
     </a>
   </div>
   <script src="./scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
-  <script src="./scripts/i18n.js?ver=1.3.1"></script>
-  <script src="./scripts/main.js?ver=1.3.0"></script>
-  <script src="./scripts/age.js?ver=1.2.0"></script>
+  <script src="./scripts/i18n.js?ver=1.4.0"></script>
+  <script src="./scripts/main.js?ver=1.4.0"></script>
+  <script src="./scripts/age.js?ver=1.2.1"></script>
 </body>
 
 </html>

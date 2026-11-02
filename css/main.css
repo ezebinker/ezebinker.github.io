@@ -430,3 +430,157 @@ footer a:not(.nav-link) {
   color: #333;
   padding: 0.45em 0.85em;
 }
+/* Accessibility */
+.text-muted {
+  color: #5c636a !important;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 2000;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #0d6efd;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* Dark theme (Bootstrap 5.0 has no built-in dark mode) */
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] body {
+  background-color: #121314;
+  color: #e4e6e8;
+}
+
+html[data-theme="dark"] .bg-light {
+  background-color: #1a1b1b !important;
+}
+
+html[data-theme="dark"] #header-nav.fixed-top {
+  background: #1a1b1b !important;
+}
+
+html[data-theme="dark"] a {
+  color: #6ea8fe;
+}
+
+html[data-theme="dark"] .link-dark,
+html[data-theme="dark"] .navbar-brand {
+  color: #e4e6e8 !important;
+}
+
+html[data-theme="dark"] .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+html[data-theme="dark"] .nav-link:hover,
+html[data-theme="dark"] .nav-link:focus,
+html[data-theme="dark"] .active .nav-link {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+html[data-theme="dark"] .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+html[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+html[data-theme="dark"] .text-muted,
+html[data-theme="dark"] .text-secondary,
+html[data-theme="dark"] .cert-meta {
+  color: #a0a6ab !important;
+}
+
+html[data-theme="dark"] .card {
+  background-color: #1a1b1b;
+  border-color: #2e3033;
+}
+
+html[data-theme="dark"] .card-header {
+  background-color: #202222;
+  border-bottom-color: #2e3033;
+}
+
+html[data-theme="dark"] .card-header img {
+  background: #fff;
+  border-radius: 6px;
+  padding: 4px;
+  box-sizing: content-box;
+}
+
+html[data-theme="dark"] .btn-outline-secondary {
+  color: #c4c8cc;
+  border-color: #5c636a;
+}
+
+html[data-theme="dark"] .btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #5c636a;
+}
+
+html[data-theme="dark"] .btn-primary {
+  color: #fff;
+}
+
+html[data-theme="dark"] #skills .badge {
+  color: #e4e6e8;
+  border-color: #3a3d40 !important;
+}
+
+html[data-theme="dark"] .cert-item,
+html[data-theme="dark"] .cert-sublist {
+  border-color: #2e3033;
+}
+
+html[data-theme="dark"] .cert-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .cert-name {
+  color: #e4e6e8;
+}
+
+html[data-theme="dark"] .cert-link,
+html[data-theme="dark"] .cert-subitem a {
+  color: #6ea8fe;
+}
+
+html[data-theme="dark"] .cert-logo-img {
+  background: #fff;
+  border-color: #2e3033;
+}
+
+html[data-theme="dark"] .wave-bg {
+  filter: brightness(0.108);
+}
+
+html[data-theme="dark"] img.profile-photo {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+html[data-theme="dark"] .skip-link:focus {
+  background: #1a1b1b;
+  color: #6ea8fe;
+}
+
+html[data-theme="dark"] .marker {
+  color: inherit;
+}

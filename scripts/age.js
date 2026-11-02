@@ -2,7 +2,8 @@
     "use strict";
 
     window.addEventListener('load', () => {
-        document.getElementById("age").innerHTML = getAge("1994/12/04")
+        const el = document.getElementById("age");
+        if (el) el.textContent = getAge("1994/12/04");
     });
 
     function getAge(dateParam) {

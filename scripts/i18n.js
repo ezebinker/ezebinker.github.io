@@ -5,10 +5,21 @@
 
   var translations = {
     es: {
+      'skip-link': 'Saltar al contenido',
+      'nav-toggle-aria': 'Abrir menú',
+      'theme-aria': 'Cambiar tema claro/oscuro',
+      'top-aria': 'Volver arriba',
+      'meta-description': 'Manager en Accenture al frente de un equipo full stack en Business Insights & Analytics (Corporate Finance). Más de 10 años en educación técnica.',
+      'sk-team': 'Gestión de equipos',
+      'sk-techlead': 'Liderazgo técnico',
+      'sk-coaching': 'Coaching y mentoring',
+      'sk-project': 'Gestión de proyectos',
+      'sk-product': 'Gestión de productos digitales',
+      'sk-digital': 'Transformación digital',
+      'sk-training': 'Formación técnica',
       'nav-about': 'Acerca de Mí',
       'nav-skills': 'Conocimientos',
       'nav-experience': 'Experiencia',
-      'nav-testimonials': 'Recomendaciones',
       'skills-title': 'Conocimientos',
       'skills-frontend': 'Frontend',
       'skills-backend': 'Backend',
@@ -55,15 +66,6 @@
       'ort-r3': 'Dirección de planes educativos dentro del departamento',
       'ort-l1': 'Aumento de hasta un 50% de estudiantes que eligen continuar la especialización',
       'ort-l2': 'Modernización de los planes educativos actuales en pos de las exigencias del mercado',
-      'test-title': 'Recomendaciones',
-      'test-1': 'Ezequiel fue muy didáctico y transmitió los contenidos de la cursada de una manera que se me hizo muy fácil de entender. Siempre estuvo a disposición para despejar dudas y fue realmente de ayuda en la resolución de los distintos ejercicios.',
-      'test-2': 'Su dedicación, compromiso, adaptabilidad e ingenio han colaborado en lograr que los proyectos planteados por todo el equipo se logren y generen un alto impacto en estudiantes y docentes.',
-      'test-3': 'Desde muy joven ha demostrado ser un profesional sumamente responsable, destacado por su compromiso, calidad humana, capacidad de escucha, trabajo en equipo, movilizador de ideas y proyectos, y una gran humildad para seguir superandose. Cada vez que recibió mas tareas, responsabilidades y compromisos, logró cumplir cada uno de los objetivos.',
-      'test-4': 'Sin duda alguna uno de los mejores profesores de programación que he tenido no solo por su conocimiento en el área, sino también por su gran capacidad para transmitir dichos conocimientos, logrando que cada clase sea indispensable y entretenida. Es una persona dedicada que siempre nos ha sabido guiar en nuestro proceso de aprendizaje, generando confianza y empatía con todos.',
-      'test-attr-1': '— Ex-alumno',
-      'test-attr-2': '— Ex-alumno',
-      'test-attr-3': '— Director de Informática',
-      'test-attr-4': '— Ex-alumno',
       'edu-title': 'Educación',
       'edu-1-degree': 'Licenciatura en Tecnologías de la Información',
       'edu-1-body': 'Trabajo Final de Grado: "Bot Docente". Proyecto desarrollado en Python utilizando Telegram Bot API y librerías de IA, como SpaCy y NLTK. Despliegue de un bot conversacional disponible en la plataforma Telegram, como apoyo complementario a la labor docente.',
@@ -84,10 +86,21 @@
       'footer-rights': 'Todos los derechos reservados'
     },
     en: {
+      'skip-link': 'Skip to content',
+      'nav-toggle-aria': 'Open menu',
+      'theme-aria': 'Toggle light/dark theme',
+      'top-aria': 'Back to top',
+      'meta-description': 'Manager at Accenture leading a full-stack development team in Business Insights & Analytics (Corporate Finance). 10+ years in technical education.',
+      'sk-team': 'Team management',
+      'sk-techlead': 'Technical leadership',
+      'sk-coaching': 'Coaching & mentoring',
+      'sk-project': 'Project management',
+      'sk-product': 'Digital product management',
+      'sk-digital': 'Digital transformation',
+      'sk-training': 'Technical training',
       'nav-about': 'About Me',
       'nav-skills': 'Skills',
       'nav-experience': 'Experience',
-      'nav-testimonials': 'Recommendations',
       'skills-title': 'Skills',
       'skills-frontend': 'Frontend',
       'skills-backend': 'Backend',
@@ -134,15 +147,6 @@
       'ort-r3': 'Leading educational plans within the department',
       'ort-l1': 'Up to 50% increase in students choosing to continue the specialization',
       'ort-l2': 'Modernization of educational plans to meet current market demands',
-      'test-title': 'Recommendations',
-      'test-1': 'Ezequiel was very approachable and conveyed the course content in a way that was easy to understand. He was always available to answer questions and was genuinely helpful when working through the exercises.',
-      'test-2': 'His dedication, commitment, adaptability, and ingenuity helped the team achieve its goals and generate a high impact on both students and teachers.',
-      'test-3': 'From a young age he has demonstrated to be an extremely responsible professional, known for his commitment, human quality, listening skills, teamwork, and great humility to keep improving. Every time he took on more tasks, responsibilities, and challenges, he met every single objective.',
-      'test-4': 'Without a doubt one of the best programming teachers I have had — not only for his expertise, but for his remarkable ability to convey knowledge in a way that makes every class both essential and engaging. A dedicated teacher who always guides us through our learning process with trust and empathy.',
-      'test-attr-1': '— Former student',
-      'test-attr-2': '— Former student',
-      'test-attr-3': '— Director of IT',
-      'test-attr-4': '— Former student',
       'edu-title': 'Education',
       'edu-1-degree': "Bachelor's in Information Technologies",
       'edu-1-body': '"Bot Docente" — Final Degree Project developed in Python using the Telegram Bot API and AI libraries such as SpaCy and NLTK. A conversational bot deployed on Telegram as a complementary support tool for teaching.',
@@ -164,26 +168,38 @@
     }
   };
 
+  function applyAttr(attr, target, lang) {
+    document.querySelectorAll('[' + attr + ']').forEach(function (el) {
+      var value = translations[lang][el.getAttribute(attr)];
+      if (value !== undefined) {
+        el.setAttribute(target, value);
+      }
+    });
+  }
+
   function applyLang(lang) {
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
-      var key = el.getAttribute('data-i18n');
-      var value = translations[lang][key];
+      var value = translations[lang][el.getAttribute('data-i18n')];
       if (value !== undefined) {
         el.innerHTML = value;
       }
     });
+    applyAttr('data-i18n-aria', 'aria-label', lang);
+    applyAttr('data-i18n-content', 'content', lang);
     document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
     document.documentElement.lang = lang;
     currentLang = lang;
-    localStorage.setItem('lang', lang);
   }
 
   window.toggleLang = function () {
-    applyLang(currentLang === 'es' ? 'en' : 'es');
+    var next = currentLang === 'es' ? 'en' : 'es';
+    applyLang(next);
+    localStorage.setItem('lang', next);
   };
 
   var savedLang = localStorage.getItem('lang');
-  if (savedLang && savedLang !== 'es') {
-    applyLang(savedLang);
+  var initialLang = savedLang || (/^es/i.test(navigator.language || '') ? 'es' : 'en');
+  if (initialLang !== 'es') {
+    applyLang(initialLang);
   }
 })();
