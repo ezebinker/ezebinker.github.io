@@ -536,8 +536,10 @@ html[data-theme="dark"] .btn-outline-secondary:hover {
   background-color: #5c636a;
 }
 
-html[data-theme="dark"] .btn-primary {
-  color: #fff;
+html[data-theme="dark"] .btn-primary,
+html[data-theme="dark"] .btn-primary:hover,
+html[data-theme="dark"] .btn-primary:focus {
+  color: #000;
 }
 
 html[data-theme="dark"] #skills .badge {
